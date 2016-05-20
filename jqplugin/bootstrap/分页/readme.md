@@ -1,3 +1,6 @@
+###效果图
+![分页效果图](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E5%88%86%E9%A1%B5/%E5%88%86%E9%A1%B5.PNG)
+
 ###使用例子
 ```
 	// 模拟获取分页数据
@@ -30,3 +33,4 @@
 		});
 	});
 ```
+
