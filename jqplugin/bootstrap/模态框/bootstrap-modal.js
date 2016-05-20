@@ -18,7 +18,6 @@ var modal = function(options){
 	var buttonClickMethod = options.buttonClickMethod;
 	
 	// 为body添加一个占位符div
-	console.info( );
 	if($("#bootstrap-alarm-placeholder")[0] == undefined) {
 		$('body').append("<div id='bootstrap-alarm-placeholder'></div>");
 	}
@@ -49,8 +48,9 @@ var modal = function(options){
 	html += 			text;
 	html += "      </div>";
 
-	var buttonId = randomString(32);
-	if(buttonValue != undefined && buttonClickMethod != null) {
+	var buttonId = "";
+	if(buttonValue != undefined && buttonClickMethod != undefined) {
+		buttonId = randomString(32);
 		html += "	  <div class='modal-footer'>";
 		html += "        <button type='button' class='btn btn-default' data-dismiss='modal'>关闭</button>";
 		html += "        <button type='button' id='"+buttonId+"' class='btn btn-primary' data-dismiss='modal'>"+buttonValue+"</button>";
@@ -68,8 +68,8 @@ var modal = function(options){
 	$("#"+id).modal('show');
 	
 	// 绑定事件
-	if(buttonValue != undefined && buttonClickMethod != null) {
-		$("#"+buttonId).on("click" , function(e){
+	if(buttonValue != undefined && buttonClickMethod != undefined) {
+		$("#"+buttonId).on("click" , function(){
 			buttonClickMethod();
 		});
 	}

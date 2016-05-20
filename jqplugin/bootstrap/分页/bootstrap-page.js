@@ -55,7 +55,7 @@
 			}
 		}
 		
-		// 是否禁用pre
+		// 拼接分页html
 		var html = "";
 		html += "<div class='container-fluid' style='width:550px'>";
 		html += "	<div class='row'>";
@@ -100,6 +100,7 @@
 		html += "                    <span aria-hidden='true'>&raquo;</span>";
 		html += "                  </a>";
 		html += "                </li>";
+		
 		html += "              </ul>";
 		html += "            </nav>";
 		html += "		</div>";
