@@ -14,8 +14,11 @@
 	// 警告框
 	function alertAlarm(){
 		modal({
-			text:"这是一个警告框",
-			closeTime : 2000,
+			title:"提示",				// 标题，默认"提示"
+			text:"这是一个警告框",		// 正文
+			closeTime : 2000,			// 自动关闭时间，默认不关闭
+			buttonValue:undefined,		// 按钮，默认没有该按钮
+			buttonClickMethod:undefined	// 对应上面的按钮的回调函数，默认没回调函数
 		});
 	}
 	

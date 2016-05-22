@@ -1,18 +1,16 @@
 // js-bbotstrap警告框插件
 var modal = function(options){
 	
-	// 参数检验
-	if(options == undefined) {
-		throw "boostrap-modal options is undefined";
-	}
+	// 默认参数
+	var defaultsOptions = {
+		title : "提示",
+    };
+	var finalOptions = $.extend(defaultsOptions,options);
 	
+	// 必要参数检验
 	var text = options.text;
 	if(text == undefined) {
 		throw "boostrap-modal text is undefined";
-	}
-	var title = options.title;
-	if(title == undefined) {
-		title = "提示";
 	}
 	var closeTime = options.closeTime;
 	var buttonValue = options.buttonValue;
@@ -43,7 +41,7 @@ var modal = function(options){
 	html += "    <div class='modal-content'>";
 	html += "      <div class='modal-header'>";
 	html += "        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-	html += "        <h4 class='modal-title' id='myModalLabel'>"+title+"</h4>";
+	html += "        <h4 class='modal-title' id='myModalLabel'>"+finalOptions.title+"</h4>";
 	html += "      </div>";
 	html += "      <div class='modal-body'>";
 	html += 			text;

@@ -29,7 +29,7 @@
 		if(nowPage > allPage){nowPage = allPage;}
 		if(nowPage <= 0) {nowPage = 1;}
 		if(autoRefresh == undefined) {
-			undefined = false;
+			autoRefresh = false;
 		}
 		
 		// 拼5个数字出来
