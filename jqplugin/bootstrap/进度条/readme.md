@@ -1,17 +1,17 @@
 ###效果图
-进度小于33%：
+进度小于33%：<br>
 ![进度小于33%](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E8%BF%9B%E5%BA%A6%E6%9D%A1/green.png)
 <br>
 
-进度33~66%：
+进度33~66%：<br>
 ![进度小于33%](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E8%BF%9B%E5%BA%A6%E6%9D%A1/yellow.png)
 <br>
 
-进度66~100%：
+进度66~100%：<br>
 ![进度小于33%](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E8%BF%9B%E5%BA%A6%E6%9D%A1/red.png)
 <br>
 
-默认：
+默认：<br>
 ![默认](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E8%BF%9B%E5%BA%A6%E6%9D%A1/blue.png)
 
 
