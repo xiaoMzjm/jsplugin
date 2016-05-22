@@ -10,6 +10,8 @@
 		var allPage = options.allPage;
 		var onClickMethod = options.onClickMethod;
 		var skipMethod = options.skipMethod;
+		var autoRefresh = options.autoRefresh;
+		var object = this;
 		
 		// 非法参数
 		if(nowPage == undefined) {
@@ -26,6 +28,9 @@
 		}
 		if(nowPage > allPage){nowPage = allPage;}
 		if(nowPage <= 0) {nowPage = 1;}
+		if(autoRefresh == undefined) {
+			undefined = false;
+		}
 		
 		// 拼5个数字出来
 		var numArray = new Array();
@@ -118,25 +123,45 @@
 		
 		this.html(html);
 		
-		// 绑定点击页数的回调函数
-		document.getElementById("BootStrapPage_submit").onclick = function(){
+		//绑定输入具体页数点击确定的回调函数
+		$("#BootStrapPage_submit").on("click",function(){
 			var pageNum = document.getElementById("BootStrapPage_page_input").value;
 			if(pageNum != undefined) {
 				if(pageNum < 1) {pageNum = 1;}
 				if(pageNum > allPage) {pageNum = allPage;}
 			}
 			skipMethod(pageNum);
-		}
-		// 绑定输入具体页数点击确定的回调函数
-		var bootStrapPage_nums = document.getElementsByName("BootStrapPage_num");
+			// 重新渲染
+			if(autoRefresh == true) {
+				object.renderPage({
+					nowPage : pageNum ,
+					allPage : allPage ,
+					autoRefresh : autoRefresh,
+					onClickMethod : onClickMethod,
+					skipMethod : skipMethod,
+				});
+			}
+		});
+		// 绑定点击页数的回调函数 
+		var bootStrapPage_nums = $("a[name='BootStrapPage_num']");
 		if(bootStrapPage_nums != undefined) {
 			for(var i = 0 ; i < bootStrapPage_nums.length ; i++){
 				var bootStrapPage_num = bootStrapPage_nums[i];
-				bootStrapPage_num.onclick = function(mouseEvent){
+				$(bootStrapPage_num).on("click",function(mouseEvent){
 					var target = mouseEvent.target|| mouseEvent.srcElement;
-					var num = target.getAttribute("data");
-					onClickMethod(num);
-				}
+					var pageNum = target.getAttribute("data");
+					onClickMethod(pageNum);
+					// 重新渲染
+					if(autoRefresh == true) {
+						object.renderPage({
+							nowPage : pageNum ,
+							allPage : allPage ,
+							autoRefresh : autoRefresh,
+							onClickMethod : onClickMethod,
+							skipMethod : skipMethod,
+						});
+					}
+				});
 			}
 		}
 		// 绑定输入页数后按回车键的回调函数

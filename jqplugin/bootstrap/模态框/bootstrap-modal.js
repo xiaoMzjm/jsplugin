@@ -14,6 +14,7 @@ var modal = function(options){
 	if(title == undefined) {
 		title = "提示";
 	}
+	var closeTime = options.closeTime;
 	var buttonValue = options.buttonValue;
 	var buttonClickMethod = options.buttonClickMethod;
 	
@@ -72,5 +73,14 @@ var modal = function(options){
 		$("#"+buttonId).on("click" , function(){
 			buttonClickMethod();
 		});
+	}
+	
+	// 自动关闭
+	if(closeTime != undefined && closeTime > 0) {
+		setTimeout(function(){
+			if($("#"+id) != undefined) {
+				$("#"+id).modal('hide');
+			}
+		}, closeTime)
 	}
 }
