@@ -1,5 +1,5 @@
 ###效果图
-![轮播](xxx)
+![轮播](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%E8%BD%AE%E6%92%AD/carousel.png)
 <br>
 
 ###使用指南
