@@ -8,7 +8,7 @@
     		array:[
     			{"text":"Home" , "href":"#"},
     			{"text":"Library" , "href":"#"},
-    			{"text":"Data" , "href":"#"}
+    			{"text":"Data"}
     		]
     	});
 	});
