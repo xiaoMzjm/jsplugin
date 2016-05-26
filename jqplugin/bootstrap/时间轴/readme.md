@@ -1,14 +1,14 @@
 ###效果图
-进度小于33%：
 ![时间轴](https://raw.githubusercontent.com/xiaoMzjm/jsplugin/master/jqplugin/bootstrap/%e6%97%b6%e9%97%b4%e8%bd%b4/timeline.png)
 <br>
 
 ###使用指南
 
 ```
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
 <script type="text/javascript" src="timeline.js"></script>
-<script type="text/javascript" src="jquery-timeline.js"></script>
 <link rel="stylesheet" type="text/css" href="timeline.css">
+<script type="text/javascript" src="jquery-timeline.js"></script>
 
 <div id="timeline"></div>
 

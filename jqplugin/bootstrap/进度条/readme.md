@@ -18,6 +18,9 @@
 ###使用指南
 
 ```
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 <script type="text/javascript" src="bootstrap-progressbar.js"></script>
 
 <div id="progressbar" style=""></div>
