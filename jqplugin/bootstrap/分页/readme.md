@@ -3,6 +3,8 @@
 
 ###使用例子
 ```
+<script type="text/javascript" src="bootstrap-page.js"></script>
+
 <div id="page" ></div>
 
 <!--使用例子-->

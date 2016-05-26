@@ -9,6 +9,8 @@
 ###使用例子
 ```
 
+<script type="text/javascript" src="bootstrap-modal.js"></script>		<!--bootstrap-警告框插件-->
+
 <script type="text/javascript">
 
 	// 快速使用：

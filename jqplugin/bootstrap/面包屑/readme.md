@@ -3,14 +3,16 @@
 
 ###使用例子
 ```
-	$(function(){
-		$("#breadcrumb").renderBreadCrumb({
-    		array:[
-    			{"text":"Home" , "href":"#"},
-    			{"text":"Library" , "href":"#"},
-    			{"text":"Data"}
-    		]
-    	});
+<script type="text/javascript" src="bootstrap-breadcrumb.js"></script>
+
+$(function(){
+	$("#breadcrumb").renderBreadCrumb({
+		array:[
+			{"text":"Home" , "href":"#"},
+			{"text":"Library" , "href":"#"},
+			{"text":"Data"}
+		]
 	});
+});
 ```
 

@@ -5,6 +5,8 @@
 ###使用指南
 
 ```
+<script type="text/javascript" src="bootstrap-carousel.js"></script>
+
 <div id="carousel"></div>
 
 <script type="text/javascript">

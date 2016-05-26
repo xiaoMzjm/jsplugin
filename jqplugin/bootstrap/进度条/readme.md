@@ -18,6 +18,8 @@
 ###使用指南
 
 ```
+<script type="text/javascript" src="bootstrap-progressbar.js"></script>
+
 <div id="progressbar" style=""></div>
 
 <script type="text/javascript">
